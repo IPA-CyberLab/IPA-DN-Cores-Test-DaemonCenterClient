@@ -13,6 +13,20 @@ cd ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/ 
 ■ どのディレクトリからでも呼べる更新コマンド
 (cd ~/IPA-DN-Cores-Test-DaemonCenterClient/ && git pull && git submodule update --init --recursive)
 
+■■ デーモンモードの設定ファイルの作成
+mkdir -p ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/Local/App_AspNetCore1/Config/DaemonSettings/
+
+cat <<\EOF > ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/Local/App_AspNetCore1/Config/DaemonSettings/DaemonSettings.json
+{
+  "DaemonCenterAppId": "ID-0619097921-639-051627953879105-APP-13189-99628",
+  "DaemonCenterCertSha": "4ebfdb7c2ac1e45456c518e43fe8289a78081dfe",
+  "DaemonCenterEnable": true,
+  "DaemonCenterRpcUrl": "https://pc34.sec.softether.co.jp/rpc",
+  "DaemonCenterStartupArgument": "Hello 001",
+  "TelnetLogWatcherPort": 8023
+}
+EOF
+
 
 ■■ デーモンモードでの動作テスト
 
@@ -30,8 +44,10 @@ dotnet run Daemon start
 
 停止
 
-dotnet run Daemon stop
+dotnet run --no-build Daemon stop
 
+
+https://dn-dc-client-test1.coe.ad.jp
 
 
 
