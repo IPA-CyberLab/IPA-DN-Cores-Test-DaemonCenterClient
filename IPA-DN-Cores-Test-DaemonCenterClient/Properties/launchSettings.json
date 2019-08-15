@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "DebugHost Run": {
+      "commandName": "Executable",
+      "executablePath": "$(ProjectDir)\\..\\submodules\\IPA-DN-Cores\\Cores.NET\\Tools\\CompiledBin\\DebugHost.exe",
+      "commandLineArgs": "restart $(ProjectName) dotnet exec $(TargetPath) Daemon Test",
+      "workingDirectory": ".\\"
+    },
+    "SingleProcess Debug": {
+      "commandName": "Project",
+      "commandLineArgs": "Daemon TestDebug"
+    }
+  }
+}
