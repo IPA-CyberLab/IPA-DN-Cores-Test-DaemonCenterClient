@@ -5,6 +5,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using IPA_DN_Cores_Test_DaemonCenterClient.Models;
+using System.IO;
+
+using IPA.Cores.Basic;
+using IPA.Cores.Helper.Basic;
+using static IPA.Cores.Globals.Basic;
+
+using IPA.Cores.Codes;
+using IPA.Cores.Helper.Codes;
+using static IPA.Cores.Globals.Codes;
 
 namespace IPA_DN_Cores_Test_DaemonCenterClient.Controllers
 {
@@ -12,7 +21,25 @@ namespace IPA_DN_Cores_Test_DaemonCenterClient.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            KeyValueList<string, string> o = new KeyValueList<string, string>();
+
+            o.Add("起動時刻", Env.BootTime.ToLocalTime()._ToDtStr());
+
+            o.Add("Git Commit Id", Dbg.GetCurrentGitCommitId());
+
+            o.Add("Process Id", Env.ProcessId.ToString());
+
+            o.Add("ExeOrDllName", Env.AppExecutableExeOrDllFileName);
+
+            o.Add("RealExeName", Env.AppRealProcessExeFileName);
+
+            o.Add("IsDotNetCore", Env.IsDotNetCore.ToString());
+
+            o.Add("DotNetHostProcessExeName", Env.DotNetHostProcessExeName);
+
+            o.Add("AppRootDir", Env.AppRootDir);
+
+            return View(o);
         }
 
         public IActionResult About()
