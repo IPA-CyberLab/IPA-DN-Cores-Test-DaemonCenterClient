@@ -8,7 +8,7 @@
     },
     "SingleProcess Debug": {
       "commandName": "Project",
-      "commandLineArgs": "Daemon TestDebug"
+      "commandLineArgs": "Daemon TestDebug /AppId:$(ProjectName)"
     }
   }
 }

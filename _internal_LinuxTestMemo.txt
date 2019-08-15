@@ -14,63 +14,25 @@ cd ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/ 
 (cd ~/IPA-DN-Cores-Test-DaemonCenterClient/ && git pull && git submodule update --init --recursive)
 
 
-======== 簡易コピー ========
-cd ~/ && rm -fr ~/Copy-IPA-DN-Cores-Copy/
+■■ デーモンモードでの動作テスト
 
+更新
 
-_internal_CopyToTestLXDContainer.cmd
+cd ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/ && (cd ../ && git pull && git submodule update --init --recursive)
 
+更新と開始
 
-cd ~/Copy-IPA-DN-Cores/Cores.NET/TestDev/ && dotnet run test
+cd ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/ && (cd ../ && git pull && git submodule update --init --recursive) && dotnet run Daemon start
 
-Web サーバーテスト
+開始
 
-cd ~/Copy-IPA-DN-Cores/Cores.NET/SampleProjects/AspNetCore1/AspNetCore1/ && rm -fr bin/ && dotnet run daemon test
+dotnet run Daemon start
 
+停止
 
-ベンチマーク
-
-cd ~/Copy-IPA-DN-Cores/Cores.NET/TestDev/ && dotnet run -c Release BenchMark
-
-
-
-プロファイリング
-
-cd ~/IPA-DN-Cores/Cores.NET/TestDev/
-COMPlus_PerfMapEnabled=1 dotnet run net
-pid を調べる
-ps auxf | grep -i "dotnet exec"
-
-cd ~/IPA-DN-Cores/Cores.NET/TestDev/
-perf record -p 1115305 -g
-
-Ctrl+C
-
-perf report -f
-
-
-メモ lxd-vm2
-
-lxc config set dn-dc-client-test1 limits.memory 8000MB
-lxc config set dn-dc-client-test1 limits.cpu 20
-
-lxc config unset dn-dc-client-test1 limits.memory
-lxc config unset dn-dc-client-test1 limits.cpu
+dotnet run Daemon stop
 
 
 
 
-gdb
-
-gdb /usr/bin/dotnet
-
-run exec /root/Copy-IPA-DN-Cores/Cores.NET/TestDev/bin/Debug/netcoreapp2.1/TestDev.dll net
-
-strace /usr/bin/dotnet exec /root/Copy-IPA-DN-Cores/Cores.NET/TestDev/bin/Debug/netcoreapp2.1/TestDev.dll net
-
-
-
-ストレステスト クライアント
-
-cd ~/Copy-IPA-DN-Cores/Cores.NET/TestDev/ && rm -fr bin/ && perl -pi -e 's/netcoreapp2\.1/netcoreapp2\.2/g' TestDev.csproj && dotnet run TcpStressServer
 
