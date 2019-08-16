@@ -55,11 +55,12 @@ https://dn-dc-client-test1.coe.ad.jp/
 
 
 ■■ メモ
-git fetch --tags --recurse-submodules=yes && git checkout --recurse-submodules 4a822f97cc5b3b454f8a9af102a68166015ce6d4
+git fetch --tags --recurse-submodules=yes && git checkout --recurse-submodules 0255106ac0739e4489d12861ade29fe9bdb2d3f4 && dotnet run --no-build Daemon stop && dotnet run --no-build Daemon stop && dotnet run Daemon start
 
 
 
 Commit ID 取得OK: c0c628fde49c561e70d1ba3c4a51f0fb938e8a76
 Hello!: 4a822f97cc5b3b454f8a9af102a68166015ce6d4
+Hello 2: 0255106ac0739e4489d12861ade29fe9bdb2d3f4
 
 

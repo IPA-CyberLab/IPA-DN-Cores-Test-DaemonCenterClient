@@ -23,9 +23,11 @@ namespace IPA_DN_Cores_Test_DaemonCenterClient.Controllers
         {
             KeyValueList<string, string> o = new KeyValueList<string, string>();
 
-            string msg = "Hello 2!";
+            string msg = "Hello 3!";
 
             o.Add("メッセージ", msg);
+
+            o.Add("メッセージ 2", Dbg.HelloMsgTest);
 
             o.Add("起動時刻", Env.BootTime.ToLocalTime()._ToDtStr());
 
