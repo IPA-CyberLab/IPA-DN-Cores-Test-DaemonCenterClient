@@ -23,6 +23,10 @@ namespace IPA_DN_Cores_Test_DaemonCenterClient.Controllers
         {
             KeyValueList<string, string> o = new KeyValueList<string, string>();
 
+            string msg = "Hello!";
+
+            o.Add("メッセージ", msg);
+
             o.Add("起動時刻", Env.BootTime.ToLocalTime()._ToDtStr());
 
             o.Add("Git Commit Id", Dbg.GetCurrentGitCommitId());

@@ -36,7 +36,7 @@ cd ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/ 
 
 更新と開始
 
-cd ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/ && (cd ../ && git pull && git submodule update --init --recursive) && dotnet run Daemon start
+cd ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/ && (cd ../ && git pull origin master && git submodule update --init --recursive) && dotnet run Daemon start
 
 開始
 
@@ -57,5 +57,7 @@ git checkout --recurse-submodules a97b7bd94e6bdbb7c068bfbf692e15be60bb3a2a
 git submodule update --init --recursive
 
 
+
+Commit ID 取得OK: c0c628fde49c561e70d1ba3c4a51f0fb938e8a76
 
 
