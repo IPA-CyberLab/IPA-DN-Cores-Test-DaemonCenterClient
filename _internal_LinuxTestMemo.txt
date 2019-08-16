@@ -70,6 +70,5 @@ Hello 3: 33b2c4b9c29a731419b6aac6c6e167c4f9544448
 Hello 4: 478b0f19eb61119daee9a0d5525a3daf03166029
 
 git update 対応
-Hello 4: d1ef232c411ab7b429e4b4faff0fcc61c2bd5bde
-Hello 11: 
+Hello 11: f7ba9f6098418c7e9ba17245bd22fc5fe662867d
 
