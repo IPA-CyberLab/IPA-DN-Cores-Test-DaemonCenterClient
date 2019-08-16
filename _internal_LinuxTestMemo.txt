@@ -32,11 +32,11 @@ EOF
 
 更新
 
-cd ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/ && (cd ../ && git pull && git submodule update --init --recursive)
+cd ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/ && (cd ../ && git submodule foreach 'git stash' && git fetch --tags --recurse-submodules=yes && git checkout --force --no-recurse-submodules master && git submodule update --init --recursive --force)
 
-更新と開始
+更新と再起動
 
-cd ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/ && (cd ../ && git pull origin master && git submodule update --init --recursive) && dotnet run Daemon start
+cd ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/ && (cd ../ && git submodule foreach 'git stash' && git fetch --tags --recurse-submodules=yes && git checkout --force --no-recurse-submodules master && git submodule update --init --recursive --force) && dotnet run --no-build Daemon stop && dotnet run Daemon start
 
 開始
 
