@@ -46,18 +46,20 @@ dotnet run Daemon start
 
 dotnet run --no-build Daemon stop
 
+再起動
+
+dotnet run --no-build Daemon stop && dotnet run Daemon start
+
 
 https://dn-dc-client-test1.coe.ad.jp/
 
 
 ■■ メモ
-git fetch --tags --recurse-submodules=yes
-git checkout --recurse-submodules a97b7bd94e6bdbb7c068bfbf692e15be60bb3a2a
-
-git submodule update --init --recursive
+git fetch --tags --recurse-submodules=yes && git checkout --recurse-submodules 4a822f97cc5b3b454f8a9af102a68166015ce6d4
 
 
 
 Commit ID 取得OK: c0c628fde49c561e70d1ba3c4a51f0fb938e8a76
+Hello!: 4a822f97cc5b3b454f8a9af102a68166015ce6d4
 
 
