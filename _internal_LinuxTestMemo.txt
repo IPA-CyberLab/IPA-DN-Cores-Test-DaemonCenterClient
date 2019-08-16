@@ -51,6 +51,10 @@ https://dn-dc-client-test1.coe.ad.jp/
 
 
 ■■ メモ
+git fetch --tags --recurse-submodules=yes
+git checkout --recurse-submodules a97b7bd94e6bdbb7c068bfbf692e15be60bb3a2a
+
+git submodule update --init --recursive
 
 
 
