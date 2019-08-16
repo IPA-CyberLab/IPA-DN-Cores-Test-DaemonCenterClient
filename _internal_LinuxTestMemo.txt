@@ -50,5 +50,8 @@ dotnet run --no-build Daemon stop
 https://dn-dc-client-test1.coe.ad.jp/
 
 
+■■ メモ
+
+
 
 
