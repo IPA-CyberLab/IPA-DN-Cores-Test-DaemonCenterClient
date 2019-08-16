@@ -92,6 +92,9 @@ namespace IPA_DN_Cores_Test_DaemonCenterClient
 
             app.UseHttpExceptionLogger();
 
+            // test
+            GlobalDaemonStateManager.MetaStatusDictionary["TestStr1"] = Dbg.HelloMsgTest;
+
             app.UseStaticFiles();
             //app.UseCookiePolicy();
 

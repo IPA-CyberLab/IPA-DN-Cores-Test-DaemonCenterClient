@@ -33,6 +33,8 @@ namespace IPA_DN_Cores_Test_DaemonCenterClient.Controllers
 
             o.Add("Git Commit Id", Dbg.GetCurrentGitCommitId());
 
+            o.Add("Startup Arguments", GlobalDaemonStateManager.StartupArguments);
+
             o.Add("Process Id", Env.ProcessId.ToString());
 
             o.Add("BuildConfigurationName", Env.BuildConfigurationName);
