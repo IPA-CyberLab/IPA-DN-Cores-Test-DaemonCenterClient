@@ -29,6 +29,8 @@ namespace IPA_DN_Cores_Test_DaemonCenterClient.Controllers
 
             o.Add("Process Id", Env.ProcessId.ToString());
 
+            o.Add("BuildConfigurationName", Env.BuildConfigurationName);
+
             o.Add("ExeOrDllName", Env.AppExecutableExeOrDllFileName);
 
             o.Add("RealExeName", Env.AppRealProcessExeFileName);
