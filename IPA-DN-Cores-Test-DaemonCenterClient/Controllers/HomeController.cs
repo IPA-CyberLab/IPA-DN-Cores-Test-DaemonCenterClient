@@ -23,7 +23,7 @@ namespace IPA_DN_Cores_Test_DaemonCenterClient.Controllers
         {
             KeyValueList<string, string> o = new KeyValueList<string, string>();
 
-            string msg = "Hello 3!";
+            string msg = "Hello 4!";
 
             o.Add("メッセージ", msg);
 
