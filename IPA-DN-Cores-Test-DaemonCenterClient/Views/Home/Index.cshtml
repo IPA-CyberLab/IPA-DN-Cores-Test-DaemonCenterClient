@@ -11,6 +11,6 @@
 <ul>
     @foreach (var kv in data)
     {
-        <li><b>@kv.Key:<br>@kv.Value<BR><br></b></li>
+        <li><b>@kv.Key:<br>@Html.Raw(kv.Value._EncodeHtml(true))<BR><br></b></li>
     }
 </ul>

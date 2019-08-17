@@ -51,6 +51,25 @@ namespace IPA_DN_Cores_Test_DaemonCenterClient.Controllers
 
             o.Add("AppRootDir", Env.AppRootDir);
 
+            // 環境変数
+            StringWriter w = new StringWriter();
+            var dic = Environment.GetEnvironmentVariables();
+            KeyValueList<string, string> tmp = new KeyValueList<string, string>();
+            foreach (System.Collections.DictionaryEntry kv in dic)
+            {
+                if (kv.Key is string key2)
+                {
+                    if (kv.Value is string value2)
+                    {
+                        tmp.Add(key2._NonNullTrim(), value2._NonNullTrim());
+                    }
+                }
+            }
+
+            tmp.OrderBy(x => x.Key)._DoForEach(x => w.WriteLine($"{x.Key} = {x.Value}"));
+
+            o.Add("Environment Values", w.ToString());
+
             return View(o);
         }
 
