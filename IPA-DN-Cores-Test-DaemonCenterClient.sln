@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29209.152
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPA-DN-Cores-Test-DaemonCenterClient", "IPA-DN-Cores-Test-DaemonCenterClient\IPA-DN-Cores-Test-DaemonCenterClient.csproj", "{F645D0B9-E671-4A57-BE9E-7E47ADA9A43A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cores.Lib.Basic.DotNet2.1.Full", "submodules\IPA-DN-Cores\Cores.NET\Cores.Lib\Cores.Lib.Basic.DotNet2.1.Full\Cores.Lib.Basic.DotNet2.1.Full.csproj", "{D6469462-584C-4972-A59B-861FE24D46F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cores.Lib.Basic.AspNet3.0.Full", "submodules\IPA-DN-Cores\Cores.NET\Cores.Lib\Cores.Lib.Basic.AspNet3.0.Full\Cores.Lib.Basic.AspNet3.0.Full.csproj", "{D6469462-584C-4972-A59B-861FE24D46F5}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Cores.Basic", "submodules\IPA-DN-Cores\Cores.NET\Cores.Basic\Cores.Basic.shproj", "{1C674893-7C84-4E7C-834E-6E2370225DA0}"
 EndProject

@@ -45,6 +45,8 @@ namespace IPA_DN_Cores_Test_DaemonCenterClient.Controllers
 
             o.Add("IsDotNetCore", Env.IsDotNetCore.ToString());
 
+            o.Add(".NET Version", Env.FrameworkInfoString);
+
             o.Add("DotNetHostProcessExeName", Env.DotNetHostProcessExeName);
 
             o.Add("AppRootDir", Env.AppRootDir);
