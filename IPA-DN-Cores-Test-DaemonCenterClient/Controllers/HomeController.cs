@@ -23,7 +23,7 @@ namespace IPA_DN_Cores_Test_DaemonCenterClient.Controllers
         {
             KeyValueList<string, string> o = new KeyValueList<string, string>();
 
-            string msg = "Hello 15!";
+            string msg = "Hello 16!";
 
             o.Add("メッセージ", msg);
 
@@ -68,7 +68,7 @@ namespace IPA_DN_Cores_Test_DaemonCenterClient.Controllers
 
             tmp.OrderBy(x => x.Key)._DoForEach(x => w.WriteLine($"{x.Key} = {x.Value}"));
 
-            o.Add("Environment Values", w.ToString());
+            //o.Add("Environment Values", w.ToString());
 
             return View(o);
         }
