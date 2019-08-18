@@ -57,12 +57,24 @@ https://dn-dc-client-test1.coe.ad.jp/
 ■■ rc.local に書いてみる
 cat <<\EOF >> /etc/rc.local
 
-dotnet run -c Release -p /root/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient.csproj daemon start
+nohup /usr/bin/dotnet run -c Release -p /root/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient.csproj daemon start > /dev/null 2>&1 &
 
 EOF
 
 ※ 停止の場合:
 dotnet run -c Release -p /root/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient.csproj --no-build daemon stop
+
+cat <<\EOF > /etc/rc.local
+#!/bin/bash
+
+touch /var/lock/subsys/local
+
+/etc/se_boot_all.sh
+
+(export HOME=/root && cd /root/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/ && /usr/bin/dotnet run -c Release Daemon start)
+
+EOF
+
 
 ■■ メモ
 git stash && git submodule foreach 'git stash' && git fetch --tags --recurse-submodules=yes && git checkout --force --no-recurse-submodules 33b2c4b9c29a731419b6aac6c6e167c4f9544448 && git submodule update --init --recursive --force
