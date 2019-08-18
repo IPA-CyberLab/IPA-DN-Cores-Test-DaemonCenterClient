@@ -76,5 +76,5 @@ Hello 16: 4f997cf955764c7a7a3d0f65b7859716eb9c1f10  環境変数なし
 
 Cores.Web 移植
 Hello 17: fd4797c7a6175c7ab95ba602a1a5dff15e2566fa
-
+Hello 18: 097bf0b7fdd7e56912e3791557fa40090d6ee27e
 
