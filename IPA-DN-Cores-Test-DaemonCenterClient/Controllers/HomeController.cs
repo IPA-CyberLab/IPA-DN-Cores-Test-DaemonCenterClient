@@ -11,6 +11,10 @@ using IPA.Cores.Basic;
 using IPA.Cores.Helper.Basic;
 using static IPA.Cores.Globals.Basic;
 
+using IPA.Cores.Web;
+using IPA.Cores.Helper.Web;
+using static IPA.Cores.Globals.Web;
+
 using IPA.Cores.Codes;
 using IPA.Cores.Helper.Codes;
 using static IPA.Cores.Globals.Codes;
@@ -23,7 +27,7 @@ namespace IPA_DN_Cores_Test_DaemonCenterClient.Controllers
         {
             KeyValueList<string, string> o = new KeyValueList<string, string>();
 
-            string msg = "Hello 16!";
+            string msg = "Hello 17!";
 
             o.Add("メッセージ", msg);
 
