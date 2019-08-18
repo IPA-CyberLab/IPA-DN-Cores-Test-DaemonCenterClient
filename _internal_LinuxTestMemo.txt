@@ -4,7 +4,7 @@ root
 ======== Git ========
 ■ 初回
 cd ~/ && rm -fr ~/IPA-DN-Cores-Test-DaemonCenterClient/
-git clone --recursive git@github.com:IPA-CyberLab/IPA-DN-Cores-Test-DaemonCenterClient.git
+git clone --recursive https://github.com/IPA-CyberLab/IPA-DN-Cores-Test-DaemonCenterClient.git
 
 
 ■ 2 回目以降
@@ -16,14 +16,14 @@ cd ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/ 
 ■■ デーモンモードの設定ファイルの作成
 mkdir -p ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/Local/App_AspNetCore1/Config/DaemonSettings/
 
-cat <<\EOF > ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/Local/App_AspNetCore1/Config/DaemonSettings/DaemonSettings.json
+cat <<\EOF > ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/Local/App_AspNetCore1/Config/DaemonSettings/AspNetCore1.json
 {
   "DaemonCenterAppId": "ID-0619097921-639-051627953879105-APP-13189-99628",
   "DaemonCenterCertSha": "4ebfdb7c2ac1e45456c518e43fe8289a78081dfe",
   "DaemonCenterEnable": true,
   "DaemonCenterRpcUrl": "https://pc34.sec.softether.co.jp/rpc",
-  "DaemonCenterStartupArgument": "Hello 001",
-  "TelnetLogWatcherPort": 8023
+  "DaemonStartupArgument": "StartLogFileBrowser",
+  "DaemonTelnetLogWatcherPort": 8023
 }
 EOF
 
@@ -54,6 +54,16 @@ dotnet run --no-build Daemon stop && dotnet run Daemon start
 https://dn-dc-client-test1.coe.ad.jp/
 
 
+■■ rc.local に書いてみる
+cat <<\EOF >> /etc/rc.local
+
+dotnet run -c Release -p /root/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient.csproj daemon start
+
+EOF
+
+※ 停止の場合:
+dotnet run -c Release -p /root/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient.csproj --no-build daemon stop
+
 ■■ メモ
 git stash && git submodule foreach 'git stash' && git fetch --tags --recurse-submodules=yes && git checkout --force --no-recurse-submodules 33b2c4b9c29a731419b6aac6c6e167c4f9544448 && git submodule update --init --recursive --force
 
@@ -76,5 +86,5 @@ Hello 16: 4f997cf955764c7a7a3d0f65b7859716eb9c1f10  環境変数なし
 
 Cores.Web 移植
 Hello 17: fd4797c7a6175c7ab95ba602a1a5dff15e2566fa
-Hello 18: 097bf0b7fdd7e56912e3791557fa40090d6ee27e
+Hello 18: 4fd1b774d3854e5fc18c534bedea789b23e4f044
 
