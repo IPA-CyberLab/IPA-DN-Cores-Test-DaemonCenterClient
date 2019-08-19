@@ -76,6 +76,19 @@ touch /var/lock/subsys/local
 EOF
 
 
+(export HOME=/root && cd /root/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/ && /usr/bin/dotnet run --no-build -c Release Daemon stop)
+
+
+/root/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/
+
+
+/root/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/bin/Release/netcoreapp3.0/IPA-DN-Cores-Test-DaemonCenterClient
+
+
+■■ systemd メモ
+
+
+
 ■■ メモ
 git stash && git submodule foreach 'git stash' && git fetch --tags --recurse-submodules=yes && git checkout --force --no-recurse-submodules 33b2c4b9c29a731419b6aac6c6e167c4f9544448 && git submodule update --init --recursive --force
 
