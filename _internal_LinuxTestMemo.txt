@@ -16,7 +16,7 @@ cd ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/ 
 ■■ デーモンモードの設定ファイルの作成
 mkdir -p ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/Local/App_AspNetCore1/Config/DaemonSettings/
 
-cat <<\EOF > ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/Local/App_AspNetCore1/Config/DaemonSettings/AspNetCore1.json
+cat <<\EOF > ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/Local/App_DCCTest/Config/DaemonSettings/DCCTest.json
 {
   "DaemonCenterAppId": "ID-0619097921-639-051627953879105-APP-13189-99628",
   "DaemonCenterCertSha": "4ebfdb7c2ac1e45456c518e43fe8289a78081dfe",
@@ -176,4 +176,8 @@ Hello 16: 4f997cf955764c7a7a3d0f65b7859716eb9c1f10  環境変数なし
 Cores.Web 移植
 Hello 20: 98c7914f73f5a680cb77574c480aecfef8f2877e
 Hello 21: 142ba47f71284d8e6464c7c21c999ea5cf5e282e
+
+
+Hello 21: 915f0af9762085248b0711bdaaf3b95a05b3c753
+Hello 22: 
 
