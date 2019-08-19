@@ -87,6 +87,39 @@ EOF
 
 ■■ systemd メモ
 
+cat <<\EOF > /root/testenv.txt
+HOME=/root
+EOF
+
+cat <<\EOF > /etc/systemd/system/IPA-DN-Cores-Test-DaemonCenterClient.service
+###
+###
+###
+
+[Unit]
+Description=IPA-DN-Cores-Test-DaemonCenterClient Service
+After=network.target
+
+[Service]
+Type=forking
+User=root
+Group=root
+ExecStart=/usr/bin/dotnet run -c Release Daemon start
+ExecStop=/usr/bin/dotnet run --no-build -c Release Daemon stop
+PIDFile=/root/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/Local/DaemonPid/AspNetCore1.pid
+WorkingDirectory=/root/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/
+TimeoutStartSec=600
+TimeoutStopSec=120
+Restart=on-abort
+Environment=HOME=/root
+Environment=DOTNET_CLI_TELEMETRY_OPTOUT=1
+
+[Install]
+WantedBy=multi-user.target
+
+EOF
+
+systemctl daemon-reload
 
 
 ■■ メモ
