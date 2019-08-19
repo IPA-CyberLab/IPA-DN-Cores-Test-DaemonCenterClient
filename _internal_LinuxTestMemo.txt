@@ -60,12 +60,12 @@ cd ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/ 
 cd ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/ && dotnet run daemon uninstall
 
 
-systemctl enable AspNetCore1   - Enable the AspNetCore1 daemon on system startup.
-systemctl disable AspNetCore1  - Disable the AspNetCore1 daemon on system startup.
-systemctl start AspNetCore1    - Start the AspNetCore1 daemon.
-systemctl stop AspNetCore1     - Stop the AspNetCore1 daemon.
-systemctl restart AspNetCore1  - Reload the AspNetCore1 daemon.
-systemctl status AspNetCore1   - Show the current status of the AspNetCore1 daemon.
+systemctl enable DCCTest   - Enable the DCCTest daemon on system startup.
+systemctl disable DCCTest  - Disable the DCCTest daemon on system startup.
+systemctl start DCCTest    - Start the DCCTest daemon.
+systemctl stop DCCTest     - Stop the DCCTest daemon.
+systemctl restart DCCTest  - Reload the DCCTest daemon.
+systemctl status DCCTest   - Show the current status of the DCCTest daemon.
 
 
 ■ Daemon のインストール (ELF として動作させる場合)
@@ -75,12 +75,12 @@ cd ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/ 
 
 /root/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/bin/Release/netcoreapp3.0/IPA-DN-Cores-Test-DaemonCenterClient daemon uninstall
 
-systemctl enable AspNetCore1   - Enable the AspNetCore1 daemon on system startup.
-systemctl disable AspNetCore1  - Disable the AspNetCore1 daemon on system startup.
-systemctl start AspNetCore1    - Start the AspNetCore1 daemon.
-systemctl stop AspNetCore1     - Stop the AspNetCore1 daemon.
-systemctl restart AspNetCore1  - Reload the AspNetCore1 daemon.
-systemctl status AspNetCore1   - Show the current status of the AspNetCore1 daemon.
+systemctl enable DCCTest   - Enable the DCCTest daemon on system startup.
+systemctl disable DCCTest  - Disable the DCCTest daemon on system startup.
+systemctl start DCCTest    - Start the DCCTest daemon.
+systemctl stop DCCTest     - Stop the DCCTest daemon.
+systemctl restart DCCTest  - Reload the DCCTest daemon.
+systemctl status DCCTest   - Show the current status of the DCCTest daemon.
 
 
 
@@ -179,5 +179,5 @@ Hello 21: 142ba47f71284d8e6464c7c21c999ea5cf5e282e
 
 
 Hello 21: 915f0af9762085248b0711bdaaf3b95a05b3c753
-Hello 22: 
+Hello 22: a5dc475fa176edd22105893e8efca7746ce50888
 
