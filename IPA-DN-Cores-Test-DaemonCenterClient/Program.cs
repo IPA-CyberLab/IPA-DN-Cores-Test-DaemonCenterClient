@@ -18,7 +18,7 @@ namespace IPA_DN_Cores_Test_DaemonCenterClient
     {
         public static int Main(string[] args)
         {
-            const string appName = "AspNetCore1";
+            const string appName = "DCCTest";
 
             return StandardMainFunctions.DaemonMain.DoMain(
                 new CoresLibOptions(CoresMode.Application,

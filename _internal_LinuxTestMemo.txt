@@ -54,6 +54,37 @@ dotnet run --no-build Daemon stop && dotnet run Daemon start
 https://dn-dc-client-test1.coe.ad.jp/
 
 
+■ Daemon のインストール (dotnet 上で動作させる場合)
+cd ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/ && dotnet run daemon install
+
+cd ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/ && dotnet run daemon uninstall
+
+
+systemctl enable AspNetCore1   - Enable the AspNetCore1 daemon on system startup.
+systemctl disable AspNetCore1  - Disable the AspNetCore1 daemon on system startup.
+systemctl start AspNetCore1    - Start the AspNetCore1 daemon.
+systemctl stop AspNetCore1     - Stop the AspNetCore1 daemon.
+systemctl restart AspNetCore1  - Reload the AspNetCore1 daemon.
+systemctl status AspNetCore1   - Show the current status of the AspNetCore1 daemon.
+
+
+■ Daemon のインストール (ELF として動作させる場合)
+cd ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/ && dotnet build -c Release
+
+/root/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/bin/Release/netcoreapp3.0/IPA-DN-Cores-Test-DaemonCenterClient daemon install
+
+/root/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/bin/Release/netcoreapp3.0/IPA-DN-Cores-Test-DaemonCenterClient daemon uninstall
+
+systemctl enable AspNetCore1   - Enable the AspNetCore1 daemon on system startup.
+systemctl disable AspNetCore1  - Disable the AspNetCore1 daemon on system startup.
+systemctl start AspNetCore1    - Start the AspNetCore1 daemon.
+systemctl stop AspNetCore1     - Stop the AspNetCore1 daemon.
+systemctl restart AspNetCore1  - Reload the AspNetCore1 daemon.
+systemctl status AspNetCore1   - Show the current status of the AspNetCore1 daemon.
+
+
+
+
 ■■ rc.local に書いてみる
 cat <<\EOF >> /etc/rc.local
 
