@@ -21,7 +21,7 @@ namespace IPA_DN_Cores_Test_DaemonCenterClient
             const string appName = "DCCTest";
 
             return StandardMainFunctions.DaemonMain.DoMain(
-                new CoresLibOptions(CoresMode.Application,
+                new CoresLibOptions(CoresMode.Daemon,
                     appName: appName,
                     defaultDebugMode: DebugMode.Debug,
                     defaultPrintStatToConsole: false,
