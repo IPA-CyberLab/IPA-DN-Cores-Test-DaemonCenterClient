@@ -74,6 +74,12 @@ namespace IPA_DN_Cores_Test_DaemonCenterClient.Controllers
 
             //o.Add("Environment Values", w.ToString());
 
+            // テスト
+            for (int i = 0; i < 100; i++)
+            {
+                i._PostData();
+            }
+
             return View(o);
         }
 
