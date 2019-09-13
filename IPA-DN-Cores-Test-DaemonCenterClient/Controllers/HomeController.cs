@@ -75,9 +75,10 @@ namespace IPA_DN_Cores_Test_DaemonCenterClient.Controllers
             //o.Add("Environment Values", w.ToString());
 
             // テスト
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 10000; i++)
             {
                 i._PostData();
+                LocalLogRouter.Router.FlushAsync(halfFlush: true)._GetResult();
             }
 
             return View(o);
