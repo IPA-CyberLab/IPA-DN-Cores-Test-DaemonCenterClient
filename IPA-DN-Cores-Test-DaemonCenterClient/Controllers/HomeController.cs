@@ -69,17 +69,17 @@ namespace IPA_DN_Cores_Test_DaemonCenterClient.Controllers
                     }
                 }
             }
-
+            
             tmp.OrderBy(x => x.Key)._DoForEach(x => w.WriteLine($"{x.Key} = {x.Value}"));
 
             //o.Add("Environment Values", w.ToString());
 
+            //string a = Str.MakeCharArray('x', 100_000);
             // テスト
-            for (int i = 0; i < 10000; i++)
+/*            for (int i = 0;; i++)
             {
                 i._PostData();
-                //LocalLogRouter.Router.FlushAsync(halfFlush: true)._GetResult();
-            }
+            } */
 
             return View(o);
         }
