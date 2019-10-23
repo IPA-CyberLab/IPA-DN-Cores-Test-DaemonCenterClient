@@ -14,16 +14,22 @@ cd ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/ 
 (cd ~/IPA-DN-Cores-Test-DaemonCenterClient/ && git pull && git submodule update --init --recursive)
 
 ■■ デーモンモードの設定ファイルの作成
-mkdir -p ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/Local/App_AspNetCore1/Config/DaemonSettings/
+mkdir -p ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/Local/App_DCCTest/Config/DaemonSettings/
 
 cat <<\EOF > ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/Local/App_DCCTest/Config/DaemonSettings/DCCTest.json
 {
-  "DaemonCenterAppId": "ID-0619097921-639-051627953879105-APP-13189-99628",
-  "DaemonCenterCertSha": "4ebfdb7c2ac1e45456c518e43fe8289a78081dfe",
+  "DaemonCenterAppId": "ID-0625141011-202-336739077640414-APP-13818-76738",
+  "DaemonCenterCertSha": "79A3E9397D41902820B18B4539266AFC5353D58115F2F94BC8E3E1338407D537",
   "DaemonCenterEnable": true,
-  "DaemonCenterRpcUrl": "https://pc34.sec.softether.co.jp/rpc",
+  "DaemonCenterRpcUrl": "https://dn-daemon1.lab.coe.ad.jp/rpc",
   "DaemonStartupArgument": "StartLogFileBrowser",
-  "DaemonTelnetLogWatcherPort": 8023
+  "DaemonTelnetLogWatcherPort": 8023,
+  "LogServerCertSha": "E5A363DB47E9EF8DA3F207818A77E2B1E67F7C97B0325670645A4E670E7701BA",
+  "LogServerEnable": true,
+  "LogServerFilter": "Default,Access,Data,Socket,Stat",
+  "LogServerHost": "dn-log1.lab.coe.ad.jp",
+  "LogServerMinimalPriority": "Debug",
+  "LogServerPort": 7003
 }
 EOF
 
