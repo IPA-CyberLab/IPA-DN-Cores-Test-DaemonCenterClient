@@ -37,6 +37,8 @@ namespace IPA_DN_Cores_Test_DaemonCenterClient.Controllers
 
             o.Add("Git Commit Id", Dbg.GetCurrentGitCommitId());
 
+            o.Add("Git Comment", Dbg.GetCurrentGitCommitInfo()?.Description ?? "-");
+
             o.Add("Startup Arguments", GlobalDaemonStateManager.StartupArguments);
 
             o.Add("Process Id", Env.ProcessId.ToString());
@@ -54,6 +56,8 @@ namespace IPA_DN_Cores_Test_DaemonCenterClient.Controllers
             o.Add("DotNetHostProcessExeName", Env.DotNetHostProcessExeName);
 
             o.Add("AppRootDir", Env.AppRootDir);
+
+            o.Add("GC Mode", Env.GcMode);
 
             // 環境変数
             StringWriter w = new StringWriter();
