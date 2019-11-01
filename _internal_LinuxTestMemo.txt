@@ -34,6 +34,27 @@ cat <<\EOF > ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCent
 EOF
 
 
+■■ PC37 を DaemonCenter にするときのテスト用
+mkdir -p ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/Local/App_DCCTest/Config/DaemonSettings/
+
+cat <<\EOF > ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/Local/App_DCCTest/Config/DaemonSettings/DCCTest.json
+{
+  "DaemonCenterAppId": "ID-0625141011-202-336739077640414-APP-13818-76738",
+  "DaemonCenterCertSha": "32AE60757094B7A6B2610A39F0D52A7EF2B7F04C1AC574A4F11F153913FC172A",
+  "DaemonCenterEnable": true,
+  "DaemonCenterRpcUrl": "https://pc37.sehosts.com/rpc",
+  "DaemonStartupArgument": "StartLogFileBrowser",
+  "DaemonTelnetLogWatcherPort": 8023,
+  "LogServerCertSha": "E5A363DB47E9EF8DA3F207818A77E2B1E67F7C97B0325670645A4E670E7701BA",
+  "LogServerEnable": true,
+  "LogServerFilter": "Default,Access,Data,Socket,Stat",
+  "LogServerHost": "dn-log1.lab.coe.ad.jp",
+  "LogServerMinimalPriority": "Debug",
+  "LogServerPort": 7003
+}
+EOF
+
+
 ■■ デーモンモードでの動作テスト
 
 更新
