@@ -19,9 +19,9 @@ mkdir -p ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterCl
 cat <<\EOF > ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/Local/App_DCCTest/Config/DaemonSettings/DCCTest.json
 {
   "DaemonCenterAppId": "ID-0625141011-202-336739077640414-APP-13818-76738",
-  "DaemonCenterCertSha": "79A3E9397D41902820B18B4539266AFC5353D58115F2F94BC8E3E1338407D537",
+  "DaemonCenterCertSha": "C0EDAA2BAA31E54AE34B8455BD35EE2B0198415C566B181F60EF5A256086CD7A",
   "DaemonCenterEnable": true,
-  "DaemonCenterRpcUrl": "https://dn-daemon1.lab.coe.ad.jp/rpc",
+  "DaemonCenterRpcUrl": "https://dn-daemon1.lab.coe.ad.jp:7004/rpc",
   "DaemonStartupArgument": "StartLogFileBrowser",
   "DaemonTelnetLogWatcherPort": 8023,
   "LogServerCertSha": "E5A363DB47E9EF8DA3F207818A77E2B1E67F7C97B0325670645A4E670E7701BA",
