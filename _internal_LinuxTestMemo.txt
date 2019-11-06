@@ -21,13 +21,13 @@ cat <<\EOF > ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCent
   "DaemonCenterAppId": "ID-0625141011-202-336739077640414-APP-13818-76738",
   "DaemonCenterCertSha": "C0EDAA2BAA31E54AE34B8455BD35EE2B0198415C566B181F60EF5A256086CD7A",
   "DaemonCenterEnable": true,
-  "DaemonCenterRpcUrl": "https://dn-daemon1.lab.coe.ad.jp:7004/rpc",
+  "DaemonCenterRpcUrl": "https://ep-daemon-server-private.coe.ad.jp:7004/rpc",
   "DaemonStartupArgument": "StartLogFileBrowser",
   "DaemonTelnetLogWatcherPort": 8023,
   "LogServerCertSha": "E5A363DB47E9EF8DA3F207818A77E2B1E67F7C97B0325670645A4E670E7701BA",
   "LogServerEnable": true,
   "LogServerFilter": "Default,Access,Data,Socket,Stat",
-  "LogServerHost": "dn-log1.lab.coe.ad.jp",
+  "LogServerHost": "ep-log-server-private.coe.ad.jp",
   "LogServerMinimalPriority": "Debug",
   "LogServerPort": 7003
 }
