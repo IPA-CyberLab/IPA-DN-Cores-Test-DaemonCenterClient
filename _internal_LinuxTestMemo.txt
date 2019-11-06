@@ -87,12 +87,18 @@ cd ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/ 
 cd ~/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/ && dotnet run daemon uninstall
 
 
-systemctl enable DCCTest   - Enable the DCCTest daemon on system startup.
-systemctl disable DCCTest  - Disable the DCCTest daemon on system startup.
-systemctl start DCCTest    - Start the DCCTest daemon.
-systemctl stop DCCTest     - Stop the DCCTest daemon.
-systemctl restart DCCTest  - Reload the DCCTest daemon.
-systemctl status DCCTest   - Show the current status of the DCCTest daemon.
+systemctl enable DCCTest
+systemctl disable DCCTest
+systemctl start DCCTest
+systemctl stop DCCTest
+systemctl restart DCCTest
+systemctl status DCCTest
+
+インストールされた設定ファイルの表示
+cat /etc/systemd/system/DCCTest.service
+
+pid
+cat /root/IPA-DN-Cores-Test-DaemonCenterClient/IPA-DN-Cores-Test-DaemonCenterClient/Local/DaemonPid/DCCTest.pid
 
 
 ■ Daemon のインストール (ELF として動作させる場合)
